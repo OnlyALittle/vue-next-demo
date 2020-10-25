@@ -8,13 +8,13 @@ export enum MutationTypes {
 
 // Mutation contracts
 export type Mutations<S = State> = {
-    [MutationTypes.SET_USER_AUTHENTICATED](state: S): void
+    [MutationTypes.SET_USER_AUTHENTICATED](state: S, info: number): void
 }
 
 // Define mutations
   // getters
 export const mutations: MutationTree<State> & Mutations = {
-    [MutationTypes.SET_USER_AUTHENTICATED](state: State) {
+    [MutationTypes.SET_USER_AUTHENTICATED](state: State, info: number) {
         state.isAuthenticated = true
     },
 }

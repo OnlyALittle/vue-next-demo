@@ -1,4 +1,4 @@
-import { createStore, createLogger } from 'vuex'
+import { createStore, createLogger } from 'vuex';
 
 import {
   AuthModule,
@@ -18,7 +18,7 @@ export const store = createStore({
       ? []
       : [createLogger()],
   modules: { AuthModule },
-}) as Store;
+});
 
 export function useStore(): Store {
   return store as Store

@@ -31,6 +31,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { MutationTypes } from '@/store/auth/mutation';
 
 interface aa {
   a:string
@@ -47,7 +48,7 @@ export default defineComponent({
     } as aa;
   },
   mounted() {
-    console.log(this.$store)
+    console.log(this.$store.commit(MutationTypes.SET_USER_AUTHENTICATED, 1))
   }
 });
 </script>

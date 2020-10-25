@@ -31,13 +31,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useStore } from '@/store'
 
 interface aa {
   a:string
 }
 
-export default {
+export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
@@ -45,10 +44,10 @@ export default {
   data() {
     return {
       a: '1'
-    };
+    } as aa;
   },
   mounted() {
-    this.
+    console.log(this.$store)
   }
-};
+});
 </script>

@@ -18,7 +18,7 @@ export const store = createStore({
       ? []
       : [createLogger()],
   modules: { AuthModule },
-})
+}) as Store;
 
 export function useStore(): Store {
   return store as Store
